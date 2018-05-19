@@ -1,0 +1,105 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+body {
+    background-color: #fff;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+a {
+    color: #111;
+}
+
+header#banner {
+    height: 450px;
+    width: 100%;
+    background-image: url(../images/snow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div#heading {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.site-title {
+    color: #111;
+    text-align: center;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+h2 {
+    color: #111;
+}
+
+div#wrapper.container-fluid {
+    padding: 0;
+}
+
+nav#navigation {
+    min-height: 60px;
+    padding: 0px 40px;
+    box-shadow: 0px 1px 5px rgba(0,0,0, 0.1);
+    ul {
+        min-height: 60px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 0px 15px;
+    }
+    a:hover {
+        text-decoration: none;
+        color:#ca9b52;
+    }
+}
+
+.content-container {
+    padding: 41px 7% 0px 7%;
+}
+
+#nav-menu-hamburger-icon {
+    background-image: url(../images/menu_icon.png);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    min-height: 60px;
+    min-width: 60px;
+    position: absolute;
+    left: 7%;
+}
+
+#nav-menu-search-icon {
+    background-image: url(../images/search_icon.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    min-height: 60px;
+    min-width: 60px;
+    position: absolute;
+    right: 7%;
+}
+
+div.portlet-column {
+    margin-bottom: 40px;
+}
