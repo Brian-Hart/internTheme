@@ -46,4 +46,7 @@
 		</#list>
 		<span id="nav-menu-search-icon"></span>
 	</ul>
+	<div id="nav-menu-search-icon2" class="navbar-form navbar-right" style="display:none" role="search">
+    <@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
+   </div>
 </nav>

@@ -9,6 +9,19 @@ body {
     background-color: #fff;
     font-family: "Open Sans", Helvetica, sans-serif;
     font-size: 15px;
+    p {
+        text-align: justify
+    }
+    p:first-of-type:first-letter { 
+        font-family: "Playfair Display";
+        font-weight: 400;
+        float: left;
+        margin: 0px 12px 0 0;
+        font-size: 80px;
+        line-height: 65px;
+        text-align: center;
+        color: #030303;
+    }
 }
 
 a {
@@ -39,6 +52,7 @@ h1.site-title {
     font-weight: 100;
     letter-spacing: 10px;
     margin: 0;
+    padding-right: 30px;
 }
 
 h2 {
@@ -78,6 +92,31 @@ nav#navigation {
     padding: 41px 7% 0px 7%;
 }
 
+#myCustomNav {
+    height: 32px;
+    background-color: #23282d;
+    font-size: 12px;
+    #sign-in {
+        height: 100%;
+        color: #eee;
+        float: right;
+        margin-right: 10px;
+        padding: 7px;
+    }
+    #myHartLogo {
+        display: inline-block;
+        font-family: "Playfair Display";
+        height: 75%;
+        margin-top: 4px;
+        margin-left: 10px;
+        padding: 0px 3px 0px 3px;
+        background-color: #ccc;
+        color: #23282d;
+        border: 4px double #23282d;
+        border-radius: 100px;
+    }
+}
+
 #nav-menu-hamburger-icon {
     background-image: url(../images/menu_icon.png);
     background-repeat: no-repeat;
@@ -102,4 +141,25 @@ nav#navigation {
 
 div.portlet-column {
     margin-bottom: 40px;
+}
+
+// center blog entry title and date info
+.entry-title {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 44px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 44px;
+    h2 {
+        padding-left: 32px;
+    }
+}
+
+.entry-info {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 25px;
 }

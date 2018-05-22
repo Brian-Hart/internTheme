@@ -22,6 +22,12 @@
 
 <div class="container-fluid" id="wrapper">
 	<header id="banner" role="banner">
+			<#if !is_signed_in>
+				<div id="myCustomNav">
+					<a href="${sign_in_url}"<span id="myHartLogo">H</span></a>
+					<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
+				</div>	
+			</#if>
 		<div id="heading">
 			<h1 class="site-title">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
@@ -38,9 +44,6 @@
 	</header>
 
 	<section id="content">
-		<#if !is_signed_in>
-			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
-		</#if>
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
@@ -62,11 +65,6 @@
 		</#if>
 	</section>
 
-	<footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</p>
-	</footer>
 </div>
 
 <@liferay_util["include"] page=body_bottom_include />
