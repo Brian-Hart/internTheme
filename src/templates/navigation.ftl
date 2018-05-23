@@ -18,8 +18,8 @@
 				/>
 			</#if>
 
-			<li ${nav_item_attr_selected} class="${nav_item_css_class}" id="layout_${nav_item.getLayoutId()}" role="presentation">
-				<a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem"><span><@liferay_theme["layout-icon"] layout=nav_item_layout /> ${nav_item.getName()}</span></a>
+			<li ${nav_item_attr_selected} class="${nav_item_css_class} customNavLi" id="layout_${nav_item.getLayoutId()}" role="presentation">
+				<a class="myNavLinks" aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup} href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem"><span><@liferay_theme["layout-icon"] layout=nav_item_layout /> ${nav_item.getName()}</span></a>
 
 				<#if nav_item.hasChildren()>
 					<ul class="child-menu" role="menu">
@@ -44,9 +44,9 @@
 				</#if>
 			</li>
 		</#list>
-		<span id="nav-menu-search-icon"></span>
+		<span id="nav-menu-search-icon" onclick="revealSearchBar()"></span>
+		<div id="nav-menu-search-icon2" class="navbar-form navbar-right" style="display:none" role="search">
+    	<@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
 	</ul>
-	<div id="nav-menu-search-icon2" class="navbar-form navbar-right" style="display:none" role="search">
-    <@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
    </div>
 </nav>
