@@ -1,227 +1,265 @@
 /* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
-$link-color: #ca9b52;
+$link-color: #CA9B52;
+$font-color: #111;
 /* inject:imports */
+
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
 a {
-    text-decoration: none;
-    color: #111;
+	color: $font-color;
+	text-decoration: none;
+}
+
+a:visited {
+	color: $font-color;
+	text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
-    color: $link-color;
+	color: $link-color;
+	text-decoration: none;
+}
+
+#banner {
+	background-image: url(../images/snow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+	width: 100%;
 }
 
 body {
-    background-color: #fff;
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-size: 15px;
-}
-
-.content-container {
-    padding: 41px 7% 0px 7%;
-}
-
-// center blog entry title and date info
-.entry-info {
-    text-align: center;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    letter-spacing: 0px;
-    line-height: 25px;
-}
-
-.entry-title {
-    text-align: center;
-    font-family: "Playfair Display";
-    font-size: 44px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    line-height: 44px;
-    h2 {
-        padding-left: 32px;
-    }
-}
-
-h1.site-title {
-    color: #111;
-    text-align: center;
-    font-size: 100px;
-    text-transform: uppercase;
-    font-weight: 100;
-    letter-spacing: 10px;
-    margin: 0;
-    a.logo {
-        display:none;
-    }
-}
-
-h2 {
-    color: #111;
-}
-
-header {
-    height: 450px;
-    width: 100%;
-    background-image: url(../images/snow.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#heading {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#nav-menu-search-icon2 {
-    padding: 0px;
-
-    input {
-        text-align: center;
-        font-size: 18px;
-        border: none;
-        box-shadow: none;
-        padding: 0px;
-    }
-
-    input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-        box-shadow: 0 0 0 100px white inset;
-    }
-    
-    input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
-        box-shadow: 0 0 0 100px white inset;
-    }
-    
-    input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
-        box-shadow: 0 0 0 100px white inset;
-    }
-}
-
-p {
-    text-align: justify;
-
-    :first-of-type:first-letter { 
-        font-family: "Playfair Display";
-        font-weight: 400;
-        float: left;
-        margin: 0px 12px 0 0;
-        font-size: 80px;
-        line-height: 65px;
-        text-align: center;
-        color: #030303;
-    }
-}
-
-#navigation, .sort-pages, .modify-pages {
-    min-height: 60px;
-    padding: 0px 40px;
-    box-shadow: 0px 1px 5px rgba(0,0,0, 0.1);
-    ul {
-        min-height: 60px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        li a {
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-            padding: 0px 15px;
-
-            :hover {
-                color: $link-color;
-                text-decoration: none;
-            }
-        }
-
-        li.selected a {
-            color: $link-color;
-        }
-    }
-}
-
-#myCustomNav {
-    height: 32px;
-    background-color: #23282d;
-    font-size: 12px;
-    #sign-in {
-        height: 100%;
-        color: #eee;
-        float: right;
-        margin-right: 10px;
-        padding: 7px;
-    }
-    #myHartLogo {
-        display: inline-block;
-        font-family: "Playfair Display";
-        height: 75%;
-        margin-top: 4px;
-        margin-left: 10px;
-        padding: 0px 3px 0px 3px;
-        background-color: #ccc;
-        color: #23282d;
-        border: 4px double #23282d;
-        border-radius: 100px;
-    }
-}
-
-#nav-menu-hamburger-icon {
-    background-image: url(../images/menu_icon.png);
-    background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: center;
-    min-height: 60px;
-    min-width: 60px;
-    position: absolute;
-    left: 7%;
-}
-
-#nav-menu-search-icon {
-    cursor: pointer;
-    background-image: url(../images/search_icon.png);
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: center;
-    min-height: 60px;
-    min-width: 60px;
-    position: absolute;
-    right: 7%;
-}
-
-.portlet-column {
-    margin-bottom: 40px;
-}
-
-.scheduler-view-day-header-day .scheduler-today-hd {
-    color: $link-color;
-    border-bottom: 3px solid $link-color;
-}
-
-.text-primary {
-    color: $link-color;
-}
-
-.user-icon-color-5 {
-    background-color: $link-color;
-}
-
-#wrapper.container-fluid {
-    padding: 0;
-}
-
-.yui3-skin-sam .calendar-portlet .yui3-calendar-weekday {
-    color: $link-color;
+	background-color: #FFF;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	font-size: 15px;
 }
 
 .btn-primary {
-    background-color: $link-color;
+	background-color: $link-color;
+	border-color: $link-color;
+}
+
+.btn-primary:link, .btn-primary:visited, .btn-primary:focus, .btn-primary:hover, .btn-primary:active, .btn-primary:active:focus {
+	background-color: $link-color;
+	border-color: $link-color;
+	outline: none;
+}
+
+.content-container {
+	padding: 41px 7% 0;
+}
+
+.entry-info {
+	font-family: "Playfair Display";
+	font-weight: normal;
+	letter-spacing: 0;
+	line-height: 25px;
+	text-align: center;
+}
+
+.entry-title {
+	font-family: "Playfair Display";
+	font-size: 44px;
+	font-weight: normal;
+
+	h2 {
+		padding-left: 32px;
+	}
+
+	letter-spacing: 0.5px;
+	line-height: 44px;
+	text-align: center;
+}
+
+h1.site-title {
+	a.logo {
+		display: none;
+	}
+
+	color: $font-color;
+	font-size: 100px;
+	font-weight: 100;
+	letter-spacing: 10px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: $font-color;
+}
+
+#heading {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+}
+
+#nav-menu-search-icon2 {
+	padding: 0;
+
+	input {
+		border: none;
+		box-shadow: none;
+		font-size: 18px;
+		padding: 0;
+		text-align: center;
+	}
+
+	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+
+	input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+
+	input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+}
+
+p {
+	text-align: justify;
+
+	:first-of-type:first-letter {
+		color: #030303;
+		float: left;
+		font-family: "Playfair Display";
+		font-size: 80px;
+		font-weight: normal;
+		line-height: 65px;
+		margin: 0 12px 0 0;
+		text-align: center;
+	}
+}
+
+#navigation, .sort-pages, .modify-pages {
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	min-height: 60px;
+	padding: 0 40px;
+
+	ul {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		list-style-type: none;
+		margin: 0;
+		min-height: 60px;
+		padding: 0;
+
+		.child-menu {
+			display: none;
+		}
+
+		li:hover .child-menu {
+			display: block;
+		}
+
+		li a {
+			font-weight: 600;
+			letter-spacing: 1px;
+			padding: 0 15px;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			:hover, :focus, :visited {
+				color: $link-color;
+				text-decoration: none;
+			}
+
+		}
+
+		li.selected a {
+			color: $link-color;
+			text-decoration: none;
+		}
+	}
+}
+
+#myCustomNav {
+	background-color: #23282D;
+	font-size: 12px;
+	height: 32px;
+
+	#myHartLogo {
+		background-color: #CCC;
+		border: 4px double #23282D;
+		border-radius: 100px;
+		color: #23282D;
+		display: inline-block;
+		font-family: "Playfair Display";
+		height: 75%;
+		margin-left: 10px;
+		margin-top: 4px;
+		padding: 0 3px;
+	}
+
+	#sign-in {
+		color: #EEE;
+		float: right;
+		height: 100%;
+		margin-right: 10px;
+		padding: 7px;
+	}
+}
+
+.nav-menu-hamburger {
+	min-height: 60px;
+	min-width: 60px;
+}
+
+.nav-menu-hamburger-span {
+	align-items: center;
+	background-image: url(../images/menu_icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 22%;
+	display: flex;
+	justify-content: center;
+	left: 7%;
+	min-height: 60px;
+	min-width: 60px;
+	position: absolute;
+}
+
+#nav-menu-search-icon {
+	background-image: url(../images/search_icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30%;
+	cursor: pointer;
+	min-height: 60px;
+	min-width: 60px;
+	position: absolute;
+	right: 7%;
+}
+
+.portlet-column {
+	margin-bottom: 40px;
+}
+
+.scheduler-view-day-header-day .scheduler-today-hd {
+	border-bottom: 3px solid $link-color;
+	color: $link-color;
+}
+
+.text-primary {
+	color: $link-color;
+}
+
+.user-icon-color-5 {
+	background-color: $link-color;
+}
+
+#wrapper.container-fluid {
+	padding: 0;
+}
+
+.yui3-calendar-weekdayrow .yui3-calendar-weekday {
+	color: $link-color;
 }

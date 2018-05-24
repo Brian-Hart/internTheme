@@ -30,18 +30,17 @@ body.portlet {
 }
 
 .portlet-title-text {
+	display: inline-block;
 	font-family: "Playfair Display";
 	font-size: 40px;
 	letter-spacing: 0.5px;
-	width: 100%;
-	text-align: center;
-	display: inline-block;
 	margin-top: 0;
-	max-width: 95%;
 	overflow: hidden;
+	text-align: center;
 	text-overflow: ellipsis;
 	vertical-align: top;
 	white-space: nowrap;
+	width: 100%;
 }
 
 .panel-page-content, .panel-page-body {
