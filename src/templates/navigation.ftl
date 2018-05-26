@@ -1,14 +1,14 @@
 <nav class="${nav_css_class}" id="navigation" role="navigation">
 	<h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
-	<ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
-		<span class="control-menu-nav-item active nav-menu-hamburger-span">
+	<div class="control-menu-nav-item active nav-menu-hamburger-icon">
 			<a class="control-menu-icon lfr-portal-tooltip product-menu-toggle sidenav-toggler" data-content="body" data-qa-id="productMenu" data-target="#_com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet_sidenavSliderId" data-title="Menu" data-toggle="sidenav" data-type="fixed-push" data-type-mobile="fixed" href="javascript:;" id="_com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet_sidenavToggleId" aria-describedby="yui_patched_v3_18_1_1_1527098774302_3014_com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet_sidenavToggleId">
 				<div class="nav-menu-hamburger">
 					<div class="pm"></div>
 					<div class="cn"></div>
 				</div>
 			</a>
-		</span>
+	</div>
+	<ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
 		<#list nav_items as nav_item>
 			<#assign
 				nav_item_attr_has_popup = ""
@@ -51,9 +51,9 @@
 				</#if>
 			</li>
 		</#list>
-		<span id="nav-menu-search-icon" onclick="revealSearchBar()"></span>
 		<div id="nav-menu-search-icon2" class="navbar-form navbar-right" style="display:none" role="search">
     	<@liferay.search default_preferences="${freeMarkerPortletPreferences}" />
+		</div>
+		<div id="nav-menu-search-icon" onclick="revealSearchBar()"></div>
 	</ul>
-   </div>
 </nav>

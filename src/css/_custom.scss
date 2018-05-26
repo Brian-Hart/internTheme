@@ -37,6 +37,10 @@ body {
 	font-size: 15px;
 }
 
+.btn {
+	margin: 0
+}
+
 .btn-primary {
 	background-color: $link-color;
 	border-color: $link-color;
@@ -138,34 +142,64 @@ p {
 	}
 }
 
-#navigation, .sort-pages, .modify-pages {
+#navigation {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 	min-height: 60px;
 	padding: 0 40px;
 
-	ul {
+	.customNavLi {
+		display: inline-block;
+		margin: 0 5px;
+		max-width: 250px;
+		overflow: hidden;
+		padding: 20px 0;
+		text-overflow: ellipsis;
+		z-index: 999;
+	}
+
+	.customNavLi:hover {
 		align-items: center;
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		overflow: visible;
+	}
+
+	ul {
 		display: flex;
 		justify-content: center;
 		list-style-type: none;
 		margin: 0;
-		min-height: 60px;
-		padding: 0;
+		padding:0 9%;
+		height: 60px;
 
 		.child-menu {
 			display: none;
 		}
 
 		li:hover .child-menu {
-			display: block;
+			background-color: #fff;
+			display: table;
+			height: auto;
+
+			li {
+				padding-top: 8px;
+				padding-left: 13px;
+
+				a {
+					white-space: nowrap;
+				}
+			}
+
 		}
 
-		li a {
+		li a.myNavLinks {
 			font-weight: 600;
 			letter-spacing: 1px;
 			padding: 0 15px;
 			text-decoration: none;
 			text-transform: uppercase;
+			white-space: nowrap;
 
 			:hover, :focus, :visited {
 				color: $link-color;
@@ -213,30 +247,34 @@ p {
 	min-width: 60px;
 }
 
-.nav-menu-hamburger-span {
+.nav-menu-hamburger-icon {
 	align-items: center;
 	background-image: url(../images/menu_icon.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 22%;
+	background-size: 30%;
 	display: flex;
 	justify-content: center;
 	left: 7%;
-	min-height: 60px;
+	max-height: 60px;
 	min-width: 60px;
 	position: absolute;
+
+	a {
+		padding: 0;
+	}
 }
 
 #nav-menu-search-icon {
 	background-image: url(../images/search_icon.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 30%;
+	background-size: 25%;
 	cursor: pointer;
 	min-height: 60px;
 	min-width: 60px;
 	position: absolute;
-	right: 7%;
+	right: 7.2%;
 }
 
 .portlet-column {
@@ -260,6 +298,54 @@ p {
 	padding: 0;
 }
 
-.yui3-calendar-weekdayrow .yui3-calendar-weekday {
-	color: $link-color;
+.yui3-skin-sam .calendar-portlet {
+
+	th.yui3-calendar-weekday, .scheduler-view-agenda-header-extra {
+		color: $link-color;
+	}
+
+	.scheduler-view-agenda-info-biggie, .scheduler-view-agenda-info-label-biggie {
+		color: #111;
+	}
+
+	.yui3-calendar-day.yui3-calendar-day-selected {
+		background-color: $link-color;
+	}
+}
+
+#navigation #portlet_com_liferay_portal_search_web_portlet_SearchPortlet {
+	max-height: 60px;
+	overflow: hidden;
+
+	.portlet-content {
+		border: none;
+		outline: none;
+	}
+
+	.portlet-topper {
+		display: none;
+	}
+}
+
+#_com_liferay_portal_search_web_portlet_SearchPortlet_searchContainer {
+	div {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+#_com_liferay_portal_search_web_portlet_SearchPortlet_facetNavigation {
+	margin-top: 20px;
+}
+
+#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
+	.portlet-body {
+		text-align: center;
+	}
+}
+
+.field-wrapper .btn {
+	margin-top: 0;
 }
