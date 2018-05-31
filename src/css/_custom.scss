@@ -123,6 +123,14 @@ h2 {
 	justify-content: center;
 }
 
+.lfr-preview-file-content, .lfr-preview-image-content, .lfr-preview-file-image-container, .lfr-preview-file-image-current-column {
+	height: auto;
+	border: none;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
+
 .navbar-form {
 	border: none;
 	margin: 0;
@@ -173,7 +181,7 @@ p:first-of-type:first-letter {
 	display: flex;
 	justify-content: center;
 	min-height: 60px;
-	padding: 0 40px;
+	padding: 0 11%;
 
 	.customNavLi {
 		display: inline-block;
@@ -195,11 +203,12 @@ p:first-of-type:first-letter {
 
 	ul {
 		display: flex;
-		height: 60px;
+		flex-wrap: wrap;
+		// height: 60px;
 		justify-content: center;
 		list-style-type: none;
 		margin: 0;
-		padding: 0 9%;
+		padding: 0;
 
 		.child-menu {
 			display: none;
@@ -303,6 +312,12 @@ p:first-of-type:first-letter {
 	right: 7.2%;
 }
 
+#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
+	.portlet-body {
+		text-align: center;
+	}
+}
+
 .portlet-column {
 	margin-bottom: 40px;
 }
@@ -380,16 +395,6 @@ p:first-of-type:first-letter {
 	margin-top: 20px;
 }
 
-// #p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
-// 	.portlet-body {
-// 		text-align: center;
-// 	}
-// }
-
-// .field-wrapper .btn {
-// 	margin-top: 0;
-// }
-
 @media only screen and (max-width: 767px) {
 	#banner {
 		height: 150px;
@@ -428,5 +433,31 @@ p:first-of-type:first-letter {
 			}
 		}
 		white-space: nowrap;
+	}
+
+	.sidebar-header {
+		display: flex;
+		flex-direction: row;
+
+		a {
+			width: 50%;
+		}
+
+		svg {
+			float: right;
+		}
+}
+
+	#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
+		fieldset {
+			display: flex;
+		}
+	}
+}
+
+.portlet-body {
+	img {
+		display: block;
+		margin: auto;
 	}
 }
