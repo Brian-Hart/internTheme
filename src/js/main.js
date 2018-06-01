@@ -42,3 +42,7 @@ function revealSearchBar() {
 	$("#nav-menu-search-icon2 svg").hide();
 	$("#nav-menu-search-icon2 input").attr("placeholder", "Type & hit Enter...");
 }
+
+function revealNavChildren() {
+	$("#navigation ul.child-menu").toggle();
+}

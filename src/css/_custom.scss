@@ -1,8 +1,8 @@
 /* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
 $link-color: #CA9B52;
 $font-color: #111;
-$title-font: "Playfair Display", "Times New Roman", serif;
-
+$serif: "Playfair Display", "Times New Roman", serif;
+$sans-serif: "Open Sans", Helvetica, sans-serif;
 /* inject:imports */
 
 /* endinject */
@@ -29,6 +29,10 @@ a:hover {
 	text-decoration: none;
 }
 
+a.rating-element, span.rating-element {
+	color: $link-color;
+}
+
 #banner {
 	background-image: url(../images/snow.png);
 	background-position: center;
@@ -41,9 +45,8 @@ a:hover {
 			display: none;
 		}
 		color: $font-color;
-		font-size: 100px;
+		font-size: 7vw;
 		font-weight: 100;
-		letter-spacing: 10px;
 		margin: 0;
 		text-align: center;
 		text-transform: uppercase;
@@ -53,7 +56,7 @@ a:hover {
 
 body {
 	background-color: #FFF;
-	font-family: "Open Sans", Helvetica, sans-serif;
+	font-family: $sans-serif;
 	font-size: 15px;
 }
 
@@ -77,7 +80,7 @@ body {
 }
 
 .entry-info {
-	font-family: "Playfair Display";
+	font-family: $serif;
 	font-weight: normal;
 	letter-spacing: 0;
 	line-height: 25px;
@@ -85,7 +88,7 @@ body {
 }
 
 .entry-title {
-	font-family: "Playfair Display";
+	font-family: $serif;
 	font-size: 44px;
 	font-weight: normal;
 
@@ -98,20 +101,6 @@ body {
 	text-align: center;
 }
 
-.site-title {
-	a.logo {
-		display: none;
-	}
-
-	color: $font-color;
-	font-size: 100px;
-	font-weight: 100;
-	letter-spacing: 10px;
-	margin: 0;
-	text-align: center;
-	text-transform: uppercase;
-}
-
 h2 {
 	color: $font-color;
 }
@@ -119,6 +108,7 @@ h2 {
 #heading {
 	align-items: center;
 	display: flex;
+	flex-direction: column;
 	height: 100%;
 	justify-content: center;
 }
@@ -131,48 +121,36 @@ h2 {
 	padding: 0;
 }
 
+#myCustomNav {
+	background-color: #23282D;
+	font-size: 12px;
+	height: 32px;
+
+	#myHartLogo {
+		background-color: #CCC;
+		border: 4px double #23282D;
+		border-radius: 100px;
+		color: #23282D;
+		display: inline-block;
+		font-family: $serif;
+		height: 75%;
+		margin-left: 10px;
+		margin-top: 4px;
+		padding: 0 3px;
+	}
+
+	#sign-in {
+		color: #EEE;
+		float: right;
+		height: 100%;
+		margin-right: 10px;
+		padding: 7px;
+	}
+}
+
 .navbar-form {
 	border: none;
 	margin: 0;
-}
-
-#nav-menu-search-icon2 {
-	padding: 0;
-
-	input {
-		border: none;
-		box-shadow: none;
-		font-size: 18px;
-		padding: 0;
-		text-align: center;
-	}
-
-	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-		box-shadow: 0 0 0 100px #FFF inset;
-	}
-
-	input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
-		box-shadow: 0 0 0 100px #FFF inset;
-	}
-
-	input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
-		box-shadow: 0 0 0 100px #FFF inset;
-	}
-}
-
-p {
-	text-align: justify;
-}
-
-p:first-of-type:first-letter {
-	color: #030303;
-	float: left;
-	font-family: "Playfair Display";
-	font-size: 80px;
-	font-weight: normal;
-	line-height: 65px;
-	margin: 0 12px 0 0;
-	text-align: center;
 }
 
 #navigation {
@@ -184,49 +162,44 @@ p:first-of-type:first-letter {
 	padding: 0 11%;
 
 	.customNavLi {
-		display: inline-block;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
 		margin: 0 5px;
-		max-width: 250px;
+		max-width: 100%;
 		overflow: hidden;
 		padding: 20px 0;
 		text-overflow: ellipsis;
 		z-index: 999;
 	}
 
-	.customNavLi:hover {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		max-width: 100%;
-		overflow: visible;
-	}
-
 	ul {
 		display: flex;
 		flex-wrap: wrap;
-		// height: 60px;
 		justify-content: center;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 
 		.child-menu {
+			background-color: #FFF;
 			display: none;
+			height: auto;
+			text-align: center;
+		}
+
+		.delete-tab {
+			top: 20px;
 		}
 
 		li:hover .child-menu {
-			background-color: #FFF;
 			display: block;
-			height: auto;
 
 			li {
-				padding-top: 8px;
-
 				a {
 					white-space: nowrap;
 				}
 			}
-			text-align: center;
 		}
 
 		li a.myNavLinks {
@@ -250,30 +223,28 @@ p:first-of-type:first-letter {
 	}
 }
 
-#myCustomNav {
-	background-color: #23282D;
-	font-size: 12px;
-	height: 32px;
-
-	#myHartLogo {
-		background-color: #CCC;
-		border: 4px double #23282D;
-		border-radius: 100px;
-		color: #23282D;
-		display: inline-block;
-		font-family: "Playfair Display";
-		height: 75%;
-		margin-left: 10px;
-		margin-top: 4px;
-		padding: 0 3px;
+#navigation #portlet_com_liferay_portal_search_web_portlet_SearchPortlet {
+	div, input, fieldset {
+		display: block;
+		height: 60px;
 	}
 
-	#sign-in {
-		color: #EEE;
-		float: right;
-		height: 100%;
-		margin-right: 10px;
-		padding: 7px;
+	.lfr-ddm-field-group {
+		display: none;
+	}
+
+	height: 60px;
+	margin-bottom: 0;
+	overflow: hidden;
+
+	.portlet-content {
+		border: none;
+		height: inherit;
+		outline: none;
+	}
+
+	.portlet-topper {
+		display: none;
 	}
 }
 
@@ -312,9 +283,55 @@ p:first-of-type:first-letter {
 	right: 7.2%;
 }
 
+#nav-menu-search-icon2 {
+	padding: 0;
+
+	input {
+		border: none;
+		box-shadow: none;
+		font-size: 18px;
+		padding: 0;
+		text-align: center;
+	}
+
+	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+
+	input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+
+	input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
+		box-shadow: 0 0 0 100px #FFF inset;
+	}
+}
+
+p {
+	text-align: justify;
+}
+
+p:first-of-type:first-letter {
+	color: #030303;
+	float: left;
+	font-family: $serif;
+	font-size: 80px;
+	font-weight: normal;
+	line-height: 65px;
+	margin: 0 12px 0 0;
+	text-align: center;
+}
+
 #p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 	.portlet-body {
 		text-align: center;
+	}
+}
+
+.portlet-body {
+	img {
+		display: block;
+		margin: auto;
 	}
 }
 
@@ -322,9 +339,27 @@ p:first-of-type:first-letter {
 	margin-bottom: 40px;
 }
 
+.progress-bar {
+	background-color: $link-color;
+}
+
 .scheduler-view-day-header-day .scheduler-today-hd {
 	border-bottom: 3px solid $link-color;
 	color: $link-color;
+}
+
+.site-title {
+	a.logo {
+		display: hidden;
+	}
+
+	color: $font-color;
+	font-size: 100px;
+	font-weight: 100;
+	letter-spacing: 10px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .text-primary {
@@ -353,31 +388,6 @@ p:first-of-type:first-letter {
 	}
 }
 
-#navigation #portlet_com_liferay_portal_search_web_portlet_SearchPortlet {
-	div, input, fieldset {
-		display: block;
-		height: 60px;
-	}
-
-	.lfr-ddm-field-group {
-		display: none;
-	}
-
-	height: 60px;
-	margin-bottom: 0;
-	overflow: hidden;
-
-	.portlet-content {
-		border: none;
-		height: inherit;
-		outline: none;
-	}
-
-	.portlet-topper {
-		display: none;
-	}
-}
-
 #_com_liferay_portal_search_web_portlet_SearchPortlet_searchContainer {
 	div {
 		align-items: center;
@@ -398,10 +408,6 @@ p:first-of-type:first-letter {
 @media only screen and (max-width: 767px) {
 	#banner {
 		height: 150px;
-
-		.site-title {
-			font-size: 50px;
-		}
 	}
 
 	#navigation {
@@ -415,12 +421,16 @@ p:first-of-type:first-letter {
 			overflow: auto;
 
 			.child-menu {
-				display: block;
-				height: auto;
+				// display: block;
+				// height: auto;
 
 				li {
 					display: block;
 				}
+			}
+
+			li:hover .child-menu {
+				display: none;
 			}
 
 			.customNavLi {
@@ -455,9 +465,8 @@ p:first-of-type:first-letter {
 	}
 }
 
-.portlet-body {
-	img {
-		display: block;
-		margin: auto;
+@media only screen and (max-width: 500px) {
+	.customNavLi {
+		max-width: 250px;
 	}
 }
