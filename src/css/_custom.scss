@@ -2,7 +2,8 @@
 $link-color: #CA9B52;
 $font-color: #111;
 $serif: "Playfair Display", "Times New Roman", serif;
-$sans-serif: "Open Sans", Helvetica, sans-serif;
+$sans-serif: "Open Sans", helvetica, sans-serif;
+
 /* inject:imports */
 
 /* endinject */
@@ -114,10 +115,10 @@ h2 {
 }
 
 .lfr-preview-file-content, .lfr-preview-image-content, .lfr-preview-file-image-container, .lfr-preview-file-image-current-column {
-	height: auto;
-	border: none;
 	background: none;
+	border: none;
 	box-shadow: none;
+	height: auto;
 	padding: 0;
 }
 
@@ -185,6 +186,10 @@ h2 {
 			background-color: #FFF;
 			display: none;
 			height: auto;
+
+			li {
+				padding: 1px;
+			}
 			text-align: center;
 		}
 
@@ -323,9 +328,19 @@ p:first-of-type:first-letter {
 }
 
 #p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
+	.btn {
+		font-size: 16px;
+		margin: 10px 0;
+		padding: 8px 18px;
+	}
+
 	.portlet-body {
 		text-align: center;
 	}
+}
+
+#p_p_id_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_ {
+	text-align: center;
 }
 
 .portlet-body {
@@ -456,7 +471,7 @@ p:first-of-type:first-letter {
 		svg {
 			float: right;
 		}
-}
+	}
 
 	#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 		fieldset {
