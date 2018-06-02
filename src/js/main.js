@@ -31,6 +31,7 @@ Liferay.on(
 	*/
 
 	function() {
+
 	}
 );
 
