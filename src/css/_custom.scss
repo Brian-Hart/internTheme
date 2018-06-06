@@ -426,9 +426,15 @@ p:first-of-type:first-letter {
 	margin-top: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	#banner {
 		height: 150px;
+	}
+
+	.carousel-main-container {
+		.slides {
+			min-height: 250px;
+		}
 	}
 
 	#navigation {
@@ -487,6 +493,11 @@ p:first-of-type:first-letter {
 }
 
 @media only screen and (max-width: 500px) {
+	.carousel-main-container {
+		.slides {
+			min-height: 200px;
+		}
+	}
 	.customNavLi {
 		max-width: 250px;
 	}
