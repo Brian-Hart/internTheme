@@ -1,26 +1,9 @@
-/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
-$link-color: #CA9B52;
 $font-color: #111;
-$serif: "Playfair Display", "Times New Roman", serif;
+$link-color: #CA9B52;
 $sans-serif: "Open Sans", helvetica, sans-serif;
+$serif: "Playfair Display", "Times New Roman", serif;
 
-/* inject:imports */
-
-/* endinject */
-
-/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
-
-a {
-	color: $font-color;
-	text-decoration: none;
-}
-
-a:visited {
-	color: $font-color;
-	text-decoration: none;
-}
-
-a:focus {
+a, a:visited, a:focus {
 	color: $font-color;
 	text-decoration: none;
 }
@@ -40,19 +23,20 @@ a.rating-element, span.rating-element {
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 450px;
+	width: 100%;
 
 	.site-title {
-		a.logo {
-			display: none;
-		}
 		color: $font-color;
 		font-size: 7vw;
 		font-weight: 100;
 		margin: 0;
 		text-align: center;
 		text-transform: uppercase;
+
+		a.logo {
+			display: none;
+		}
 	}
-	width: 100%;
 }
 
 body {
@@ -77,7 +61,7 @@ body {
 }
 
 .content-container {
-	padding: 41px 7% 0;
+	padding: 3% 7% 0;
 }
 
 .entry-info {
@@ -92,14 +76,13 @@ body {
 	font-family: $serif;
 	font-size: 44px;
 	font-weight: normal;
+	letter-spacing: 0.5px;
+	line-height: 44px;
+	text-align: center;
 
 	h2 {
 		padding-left: 32px;
 	}
-
-	letter-spacing: 0.5px;
-	line-height: 44px;
-	text-align: center;
 }
 
 h2 {
@@ -116,7 +99,7 @@ h2 {
 
 .lfr-preview-file-content, .lfr-preview-image-content, .lfr-preview-file-image-container, .lfr-preview-file-image-current-column {
 	background: none;
-	border: none;
+	border-width: 0;
 	box-shadow: none;
 	height: auto;
 	padding: 0;
@@ -162,18 +145,6 @@ h2 {
 	min-height: 60px;
 	padding: 0 11%;
 
-	.customNavLi {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		margin: 0 5px;
-		max-width: 100%;
-		overflow: hidden;
-		padding: 20px 0;
-		text-overflow: ellipsis;
-		z-index: 999;
-	}
-
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -182,15 +153,59 @@ h2 {
 		margin: 0;
 		padding: 0;
 
-		.child-menu {
-			background-color: #FFF;
-			display: none;
-			height: auto;
+		.custom-nav-li {
+			margin: 0 5px;
+			max-width: 100%;
+			overflow: hidden;
+			padding: 20px 0;
+			text-overflow: ellipsis;
+			z-index: 99;
 
-			li {
-				padding: 1px;
+			.child-menu {
+				background-color: #FFF;
+				display: none;
+				height: auto;
+				text-align: center;
+	
+				li {
+					padding: 1px;
+	
+					a:hover {
+						color: $link-color;
+						// text-decoration: none;
+					}
+				}
 			}
-			text-align: center;
+
+			&:hover .child-menu {
+				display: block;
+	
+				li {
+					a {
+						white-space: nowrap;
+					}
+				}
+			}
+
+			.my-nav-links {
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 0 15px;
+				text-decoration: none;
+				text-transform: uppercase;
+				white-space: nowrap;
+
+				&:focus, &:hover {
+					color: $link-color;
+					text-decoration: none;
+				}
+			}
+
+			&.selected {
+				> a {
+					color: $link-color;
+				}
+			}
 		}
 
 		.delete-tab {
@@ -201,39 +216,14 @@ h2 {
 			flex-direction: column;
 			font-size: 12px;
 		}
-
-		li:hover .child-menu {
-			display: block;
-
-			li {
-				a {
-					white-space: nowrap;
-				}
-			}
-		}
-
-		li a.myNavLinks {
-			font-weight: 600;
-			letter-spacing: 1px;
-			padding: 0 15px;
-			text-decoration: none;
-			text-transform: uppercase;
-			white-space: nowrap;
-
-			:hover, :focus, :visited {
-				color: $link-color;
-				text-decoration: none;
-			}
-		}
-
-		li.selected a {
-			color: $link-color;
-			text-decoration: none;
-		}
 	}
 }
 
 #navigation #portlet_com_liferay_portal_search_web_portlet_SearchPortlet {
+	height: 60px;
+	margin-bottom: 0;
+	overflow: hidden;
+
 	div, input, fieldset {
 		display: block;
 		height: 60px;
@@ -242,10 +232,6 @@ h2 {
 	.lfr-ddm-field-group {
 		display: none;
 	}
-
-	height: 60px;
-	margin-bottom: 0;
-	overflow: hidden;
 
 	.portlet-content {
 		border: none;
@@ -305,32 +291,35 @@ h2 {
 		text-align: center;
 	}
 
-	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-		box-shadow: 0 0 0 100px #FFF inset;
-	}
-
-	input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover {
-		box-shadow: 0 0 0 100px #FFF inset;
-	}
-
-	input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
+	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus  {
 		box-shadow: 0 0 0 100px #FFF inset;
 	}
 }
 
 p {
 	text-align: justify;
+
+	&:first-of-type:first-letter {
+		color: #030303;
+		float: left;
+		font-family: $serif;
+		font-size: 80px;
+		font-weight: normal;
+		line-height: 65px;
+		margin: 0 12px 0 0;
+		text-align: center;
+	}
 }
 
-p:first-of-type:first-letter {
-	color: #030303;
-	float: left;
-	font-family: $serif;
-	font-size: 80px;
-	font-weight: normal;
-	line-height: 65px;
-	margin: 0 12px 0 0;
-	text-align: center;
+.pagination > li {
+	> a {
+		color: $link-color;
+	}
+
+	&.active > a, &.active:hover > a {
+		background-color: $link-color;
+		border-color: $link-color;
+	}
 }
 
 #p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
@@ -370,10 +359,6 @@ p:first-of-type:first-letter {
 }
 
 .site-title {
-	a.logo {
-		display: hidden;
-	}
-
 	color: $font-color;
 	font-size: 100px;
 	font-weight: 100;
@@ -381,6 +366,10 @@ p:first-of-type:first-letter {
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
+
+	a.logo {
+		display: hidden;
+	}
 }
 
 .text-primary {
@@ -426,20 +415,22 @@ p:first-of-type:first-letter {
 	margin-top: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $screen-sm) {
 	#banner {
-		height: 150px;
+		height: 200px;
 	}
 
 	.carousel-main-container {
 		.slides {
-			min-height: 250px;
+			min-height: 200px;
+			max-height: 300px;
 		}
 	}
 
 	#navigation {
 		flex-direction: column;
 		text-align: center;
+		white-space: nowrap;
 
 		ul {
 			display: block;
@@ -448,9 +439,6 @@ p:first-of-type:first-letter {
 			overflow: auto;
 
 			.child-menu {
-				// display: block;
-				// height: auto;
-
 				li {
 					display: block;
 				}
@@ -460,7 +448,7 @@ p:first-of-type:first-letter {
 				display: none;
 			}
 
-			.customNavLi {
+			.custom-nav-li {
 				align-items: center;
 				display: flex;
 				flex-direction: column;
@@ -469,7 +457,6 @@ p:first-of-type:first-letter {
 				padding: 4px 0;
 			}
 		}
-		white-space: nowrap;
 	}
 
 	.sidebar-header {
@@ -492,13 +479,14 @@ p:first-of-type:first-letter {
 	}
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: $screen-xs) {
 	.carousel-main-container {
-		.slides {
-			min-height: 200px;
+		> .slides {
+			height: 200px;
 		}
 	}
-	.customNavLi {
+
+	.custom-nav-li {
 		max-width: 250px;
 	}
 }
