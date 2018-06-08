@@ -64,6 +64,20 @@ body {
 	padding: 3% 7% 0;
 }
 
+.portlet-forms-display {
+	.ddl-form-name {
+		display: none;
+	}
+
+	 .portlet-forms .required-warning {
+	text-align: center;
+	}
+
+	// .portlet-title-text {
+	// 	display: none;
+	// }
+}
+
 .entry-info {
 	font-family: $serif;
 	font-weight: normal;
@@ -349,6 +363,12 @@ p {
 	margin-bottom: 40px;
 }
 
+.portlet-image-gallery-display {
+	.lfr-asset-metadata, .lfr-asset-description, .taglib-header {
+		display: none;
+	}
+}
+
 .progress-bar {
 	background-color: $link-color;
 }
@@ -472,6 +492,10 @@ p {
 		}
 	}
 
+	// #_com_liferay_calendar_web_portlet_CalendarPortlet_columnGrid {
+	// 	width: 100%;
+	// }
+
 	#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 		fieldset {
 			display: flex;
@@ -488,5 +512,11 @@ p {
 
 	.custom-nav-li {
 		max-width: 250px;
+	}
+}
+
+@media only screen and (min-width: $screen-lg) {
+	.col-md-6 .calendar-portlet-column-parent .calendar-portlet-column-grid {
+		width: 100%;
 	}
 }
