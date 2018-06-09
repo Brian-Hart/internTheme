@@ -61,7 +61,12 @@ body {
 }
 
 .content-container {
-	padding: 3% 7% 0;
+	padding: 2% 7% 0;
+}
+
+#ControlMenu > div {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .portlet-forms-display {
@@ -72,10 +77,6 @@ body {
 	 .portlet-forms .required-warning {
 	text-align: center;
 	}
-
-	// .portlet-title-text {
-	// 	display: none;
-	// }
 }
 
 .entry-info {
@@ -101,6 +102,17 @@ body {
 
 h2 {
 	color: $font-color;
+}
+
+.has-control-menu #wrapper {
+	margin-top: 36px!important;
+	padding: 0;
+
+	@media only screen and (min-width: $screen-sm) {
+		.has-control-menu #wrapper {
+			margin-top: 36px!important;
+		}
+	}
 }
 
 #heading {
@@ -336,6 +348,12 @@ p {
 	}
 }
 
+#panel-manage-site_administration_content {
+	.scope-selector {
+	width: 100%;
+	}
+}
+
 #p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 	.btn {
 		font-size: 16px;
@@ -398,10 +416,6 @@ p {
 
 .user-icon-color-5 {
 	background-color: $link-color;
-}
-
-#wrapper.container-fluid {
-	padding: 0;
 }
 
 .yui3-skin-sam .calendar-portlet {
@@ -491,10 +505,6 @@ p {
 			float: right;
 		}
 	}
-
-	// #_com_liferay_calendar_web_portlet_CalendarPortlet_columnGrid {
-	// 	width: 100%;
-	// }
 
 	#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 		fieldset {
