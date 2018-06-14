@@ -1,7 +1,9 @@
 $font-color: #111;
+$footer-color: #29343D;
 $link-color: #CA9B52;
 $sans-serif: "Open Sans", helvetica, sans-serif;
 $serif: "Playfair Display", "Times New Roman", serif;
+$white-color: #FFF;
 
 a, a:visited, a:focus {
 	color: $font-color;
@@ -40,13 +42,9 @@ a.rating-element, span.rating-element {
 }
 
 body {
-	background-color: #FFF;
+	background-color: $white-color;
 	font-family: $sans-serif;
 	font-size: 15px;
-}
-
-.btn {
-	margin: 0;
 }
 
 .btn-primary {
@@ -58,6 +56,14 @@ body {
 	background-color: $link-color;
 	border-color: $link-color;
 	outline: none;
+}
+
+.calendar-portlet-column-parent > div.row {
+	display: flex;
+
+	.calendar-portlet-column-grid {
+		flex-basis: 100%;
+	}
 }
 
 .content-container {
@@ -104,6 +110,77 @@ h2 {
 	color: $font-color;
 }
 
+#hart-footer {
+	background-color: $footer-color;
+	color: $white-color;
+	font-family: $sans-serif;
+
+	a {
+		color: $white-color;
+
+		&:focus, &:visited {
+			color: $white-color;
+		}
+
+		&:hover {
+			color: #ccc;
+		}
+	}
+	
+	.hart-footer-content {
+		padding: 40px 0;
+		margin: auto;
+		width: 86%;
+
+		.hart-footer-contact {
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 16px;
+			justify-content: center;
+			margin: auto;
+
+			.contact-item {
+				padding: 10px;
+			}
+		}
+
+		.hart-footer-nav-group {
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 18px;
+			justify-content: center;
+			margin: auto;
+
+			.hart-footer-nav-item {
+				padding: 10px;
+			}
+		}
+
+		.hart-nav-logo {
+			border: 1px solid $white-color;
+			border-radius: 10px;
+			margin: auto;
+			margin-bottom: 10px;
+			padding: 5px;
+			text-align: center;
+			width: fit-content;
+
+			.hart-nav-logo-description {
+				font-family: $sans-serif;
+				font-size: 12px;
+				padding: 0;
+			}
+			
+			.hart-nav-logo-name {
+				font-family: $serif;
+				text-decoration: underline;
+				font-size: 18px;
+				padding: 0;
+			}
+		}
+	}
+}
+
 .has-control-menu #wrapper {
 	margin-top: 36px!important;
 	padding: 0;
@@ -131,16 +208,48 @@ h2 {
 	padding: 0;
 }
 
+#modal {
+	.modal-body {
+		font-family: $serif;
+		text-indent: 30px;
+
+		h3 {
+			margin: 0 20px;
+		}
+	}	
+
+	.modal-footer .btn-toolbar {
+		display: flex;
+		justify-content: center;
+
+		.btn {
+			background-color: #EFEFEF;
+		}
+	}
+
+	.modal-header {
+		background-color: $link-color;
+		background-image: url(https://s3.freefoto.com/images/9909/12/9909_12_4725_web.jpg);
+		background-position: center;
+		background-size: cover;
+
+		h1 {
+		color: $white-color;
+		text-shadow: 3px 2px #111;
+		}
+	}
+}
+
 #myCustomNav {
-	background-color: #23282D;
+	background-color: $footer-color;
 	font-size: 12px;
 	height: 32px;
 
 	#myHartLogo {
 		background-color: #CCC;
-		border: 4px double #23282D;
+		border: 4px double $footer-color;
 		border-radius: 100px;
-		color: #23282D;
+		color: $footer-color;
 		display: inline-block;
 		font-family: $serif;
 		height: 75%;
@@ -188,7 +297,7 @@ h2 {
 			z-index: 99;
 
 			.child-menu {
-				background-color: #FFF;
+				background-color: $white-color;
 				display: none;
 				height: auto;
 				text-align: center;
@@ -318,7 +427,7 @@ h2 {
 	}
 
 	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus  {
-		box-shadow: 0 0 0 100px #FFF inset;
+		box-shadow: 0 0 0 100px $white-color inset;
 	}
 }
 
@@ -370,6 +479,17 @@ p {
 	text-align: center;
 }
 
+#p_p_id_com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet_INSTANCE_Be7vz8uRrSYu_ {
+	.lfr-ddm-form-pagination-controls {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.portlet-forms .lfr-ddm-form-field-container {
+		padding: 10px;
+	}
+}
+
 .portlet-body {
 	img {
 		display: block;
@@ -382,7 +502,35 @@ p {
 }
 
 .portlet-image-gallery-display {
+	.card {
+		border-width: 0;
+		box-shadow: 1px 1px 7px 2px #aaa;
+	}
+
 	.lfr-asset-metadata, .lfr-asset-description, .taglib-header {
+		display: none;
+	}
+}
+
+.portlet-title-text {
+	display: none;
+}
+
+#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_nTPfN3XyL2O5 {
+	.portlet-body {
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		max-width: 1500px;
+
+		.asset-full-content {
+			flex-basis: 30%;
+			flex-grow: 1;
+			padding: 2%;
+		}
+	}
+
+	.portlet-title-text {
 		display: none;
 	}
 }
@@ -414,8 +562,18 @@ p {
 	color: $link-color;
 }
 
+ul.breadcrumb {
+	background-color: $white-color;
+	margin: auto;
+	width: fit-content;
+}
+
 .user-icon-color-5 {
 	background-color: $link-color;
+}
+
+#wrapper {
+	padding: 0;
 }
 
 .yui3-skin-sam .calendar-portlet {
@@ -506,6 +664,14 @@ p {
 		}
 	}
 
+	#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_nTPfN3XyL2O5 {
+		.portlet-body {
+			.asset-full-content {
+				flex-basis: 44%;
+			}
+		}
+	}
+
 	#p_p_id_com_liferay_dictionary_web_portlet_DictionaryPortlet_ {
 		fieldset {
 			display: flex;
@@ -523,10 +689,12 @@ p {
 	.custom-nav-li {
 		max-width: 250px;
 	}
-}
 
-@media only screen and (min-width: $screen-lg) {
-	.col-md-6 .calendar-portlet-column-parent .calendar-portlet-column-grid {
-		width: 100%;
+	#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_nTPfN3XyL2O5 {
+		.portlet-body {
+			.asset-full-content {
+				flex-basis: 90%;
+			}
+		}
 	}
 }

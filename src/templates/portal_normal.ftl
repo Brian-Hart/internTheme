@@ -65,6 +65,8 @@
 				</@>
 			</#if>
 		</section>
+
+		<#include "${full_templates_path}/footer.ftl" />
 	</div>
 
 	<@liferay_util["include"] page=body_bottom_include />
