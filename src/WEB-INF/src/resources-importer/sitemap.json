@@ -1,0 +1,72 @@
+{
+	"layoutTemplateId":"1_column",
+	"publicPages": [
+		{
+			"friendlyURL": "/about",
+			"name": "About",
+			"title": "About",
+			"layouts": [
+				{
+					"friendlyURL": "/blog",
+					"name": "Blog",
+					"title": "Blog",
+					"layoutTemplateId": "2_columns_iii"
+				},
+				{
+					"friendlyURL": "/my-reviews",
+					"name": "Reviews",
+					"title": "Reviews"
+				}
+			]
+		},
+		{
+			"friendlyURL": "/portfolio",
+			"name": "Portfolio",
+			"title": "Portfolio",
+			"layouts": [
+				{
+					"friendlyURL": "/baby",
+					"name": "Baby",
+					"title": "Baby",
+					"layouts": [
+						{
+							"friendlyURL": "/birth",
+							"name": "Birth",
+							"title": "Birth"
+						}
+					]
+				},
+				{
+					"friendlyURL": "/family",
+					"name": "Family",
+					"title": "Family"
+				},
+				{
+					"friendlyURL": "/weddings",
+					"name": "Weddings",
+					"title": "Weddings",
+					"layouts": [
+						{
+							"friendlyURL": "/video",
+							"name": "Video",
+							"title": "Video",
+							"layoutTemplateId": "2_1_2_columns"
+						}
+					]
+				}
+			]
+		},
+		{
+			"friendlyURL": "/contact",
+			"name": "Contact",
+			"title": "Contact",
+			"layouts": [
+				{
+					"friendlyURL": "/map",
+					"name": "Map",
+					"title": "Map"
+				}
+			]
+		}
+	]
+}
