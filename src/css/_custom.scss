@@ -524,7 +524,7 @@ p {
 		max-width: 1500px;
 
 		.asset-full-content {
-			flex-basis: 30%;
+			flex-basis: 22%;
 			flex-grow: 1;
 			padding: 2%;
 		}
@@ -532,6 +532,26 @@ p {
 
 	.portlet-title-text {
 		display: none;
+	}
+}
+
+#portlet_com_liferay_blogs_web_portlet_BlogsPortlet {
+	.entry {
+		box-shadow: 1px 1px 7px 2px #aaa;
+		margin-bottom: 80px;
+		padding: 40px;
+
+		a {
+			color: $link-color;
+		}
+
+		.entry-subtitle > h4 {
+			margin-top: 0;
+		}
+
+		.entry-title > h1 {
+			margin: 40px 0 0 0;
+		}
 	}
 }
 
@@ -566,6 +586,21 @@ ul.breadcrumb {
 	background-color: $white-color;
 	margin: auto;
 	width: fit-content;
+}
+
+ul.tag-items.tag-cloud {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+
+	li {
+		background-color: #aaa;
+		border-bottom: 1px solid $white-color;
+
+		a:hover, a.tag-selected {
+			color: $white-color;
+		}
+	}
 }
 
 .user-icon-color-5 {
@@ -605,6 +640,16 @@ ul.breadcrumb {
 
 #_com_liferay_portal_search_web_portlet_SearchPortlet_facetNavigation {
 	margin-top: 20px;
+}
+
+@media only screen and (max-width: $screen-lg) {
+	#portlet_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_nTPfN3XyL2O5 {
+		.portlet-body {
+			.asset-full-content {
+				flex-basis: 30%;
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: $screen-sm) {
