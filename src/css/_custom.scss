@@ -71,8 +71,8 @@ body {
 }
 
 #ControlMenu > div {
-	padding-top: 0;
 	padding-bottom: 0;
+	padding-top: 0;
 }
 
 .portlet-forms-display {
@@ -80,8 +80,8 @@ body {
 		display: none;
 	}
 
-	 .portlet-forms .required-warning {
-	text-align: center;
+	.portlet-forms .required-warning {
+		text-align: center;
 	}
 }
 
@@ -123,13 +123,13 @@ h2 {
 		}
 
 		&:hover {
-			color: #ccc;
+			color: #CCC;
 		}
 	}
-	
+
 	.hart-footer-content {
-		padding: 40px 0;
 		margin: auto;
+		padding: 40px 0;
 		width: 86%;
 
 		.hart-footer-contact {
@@ -170,24 +170,24 @@ h2 {
 				font-size: 12px;
 				padding: 0;
 			}
-			
+
 			.hart-nav-logo-name {
 				font-family: $serif;
-				text-decoration: underline;
 				font-size: 18px;
 				padding: 0;
+				text-decoration: underline;
 			}
 		}
 	}
 }
 
 .has-control-menu #wrapper {
-	margin-top: 36px!important;
+	margin-top: 36px !important;
 	padding: 0;
 
 	@media only screen and (min-width: $screen-sm) {
 		.has-control-menu #wrapper {
-			margin-top: 36px!important;
+			margin-top: 36px !important;
 		}
 	}
 }
@@ -216,7 +216,7 @@ h2 {
 		h3 {
 			margin: 0 20px;
 		}
-	}	
+	}
 
 	.modal-footer .btn-toolbar {
 		display: flex;
@@ -234,8 +234,8 @@ h2 {
 		background-size: cover;
 
 		h1 {
-		color: $white-color;
-		text-shadow: 3px 2px #111;
+			color: $white-color;
+			text-shadow: 3px 2px #111;
 		}
 	}
 }
@@ -301,10 +301,10 @@ h2 {
 				display: none;
 				height: auto;
 				text-align: center;
-	
+
 				li {
 					padding: 1px;
-	
+
 					a:hover {
 						color: $link-color;
 						// text-decoration: none;
@@ -314,7 +314,7 @@ h2 {
 
 			&:hover .child-menu {
 				display: block;
-	
+
 				li {
 					a {
 						white-space: nowrap;
@@ -415,8 +415,8 @@ h2 {
 }
 
 #nav-menu-search-icon2 {
-	padding: 0;
 	display: none;
+	padding: 0;
 
 	input {
 		border: none;
@@ -426,7 +426,7 @@ h2 {
 		text-align: center;
 	}
 
-	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus  {
+	input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill, input:-webkit-autofill:hover, textarea:-webkit-autofill:hover, select:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus, .form-control:focus {
 		box-shadow: 0 0 0 100px $white-color inset;
 	}
 }
@@ -459,7 +459,7 @@ p {
 
 #panel-manage-site_administration_content {
 	.scope-selector {
-	width: 100%;
+		width: 100%;
 	}
 }
 
@@ -487,13 +487,13 @@ p {
 		display: flex;
 		justify-content: center;
 	}
-	
+
 	.portlet-forms .lfr-ddm-form-field-container {
 		padding: 10px;
 	}
 }
 
-#p_p_id_com_liferay_chat_web_portlet_ChatPortlet_{
+#p_p_id_com_liferay_chat_web_portlet_ChatPortlet_ {
 	display: none;
 }
 
@@ -511,7 +511,7 @@ p {
 .portlet-image-gallery-display {
 	.card {
 		border-width: 0;
-		box-shadow: 1px 1px 7px 2px #aaa;
+		box-shadow: 1px 1px 7px 2px #AAA;
 	}
 
 	.lfr-asset-metadata, .lfr-asset-description, .taglib-header {
@@ -544,7 +544,7 @@ p {
 
 #portlet_com_liferay_blogs_web_portlet_BlogsPortlet {
 	.entry {
-		box-shadow: 1px 1px 7px 2px #aaa;
+		box-shadow: 1px 1px 7px 2px #AAA;
 		margin-bottom: 80px;
 		padding: 40px;
 
@@ -557,7 +557,7 @@ p {
 		}
 
 		.entry-title > h1 {
-			margin: 40px 0 0 0;
+			margin: 40px 0 0;
 		}
 	}
 }
@@ -599,16 +599,16 @@ ul.breadcrumb {
 	width: fit-content;
 }
 
-#portlet_com_liferay_asset_tags_navigation_web_portlet_AssetTagsNavigationPortlet_INSTANCE_5JcxUSygwReX{
+#portlet_com_liferay_asset_tags_navigation_web_portlet_AssetTagsNavigationPortlet_INSTANCE_5JcxUSygwReX {
 	margin-top: 150px;
-	
+
 	ul.tag-items.tag-cloud {
 		display: flex;
 		flex-direction: column;
 		text-transform: uppercase;
 
 		li {
-			background-color: #aaa;
+			background-color: #AAA;
 			border-bottom: 1px solid $white-color;
 			font-size: 15px;
 			text-align: center;
@@ -676,8 +676,8 @@ ul.breadcrumb {
 
 	.carousel-main-container {
 		.slides {
-			min-height: 200px;
 			max-height: 300px;
+			min-height: 200px;
 		}
 	}
 
