@@ -6,24 +6,24 @@
 			"name": "About",
 			"title": "About",
 			"columns": [
-                [
-                    {
-                        "portletId": "com_liferay_document_library_web_portlet_IGDisplayPortlet",
-                        "portletPreferences": {
+				[
+					{
+						"portletId": "com_liferay_document_library_web_portlet_IGDisplayPortlet",
+						"portletPreferences": {
 							"displayStyle": "ddmTemplate_FRONTPAGE-CAROUSEL",
 							"displayStyleGroupId": "${groupId}",
 							"queryName0": "assetTags",
 							"queryValues0": "carousel"
-                        }
-                    },
-                    {
+						}
+					},
+					{
 						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
-                        "portletPreferences": {
-                            "articleId": "Landing Page Description.xml",
-                            "groupId": "${groupId}",
-                            "portletSetupPortletDecoratorId": "barebone"
-                        }
-                    }
+						"portletPreferences": {
+							"articleId": "Landing Page Description.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "barebone"
+						}
+					}
 				]
 			],
 			"layouts": [
@@ -57,7 +57,7 @@
 						]
 					]
 				},
-				{	
+				{
 					"friendlyURL": "/my-reviews",
 					"name": "Reviews",
 					"title": "Reviews",
@@ -67,7 +67,7 @@
 								"portletId": "com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_nTPfN3XyL2O5",
 								"portletPreferences": {
 									"articleId": "My First Review.xml",
-                            		"groupId": "${groupId}",
+									"groupId": "${groupId}",
 									"portletSetupPortletDecoratorId": "barebone"
 								}
 							},
@@ -219,7 +219,7 @@
 										"portletPreferences": {
 											"portletSetupPortletDecoratorId": "barebone"
 										}
-									} 
+									}
 								],
 								[
 									{
@@ -227,7 +227,7 @@
 										"portletPreferences": {
 											"portletSetupPortletDecoratorId": "barebone"
 										}
-									} 
+									}
 								]
 							]
 						}
@@ -254,7 +254,7 @@
 							"portletSetupPortletDecoratorId": "barebone"
 						}
 					},
-					{ 
+					{
 						"portletId": "com_liferay_dynamic_data_lists_form_web_portlet_DDLFormPortlet_INSTANCE_Be7vz8uRrSYu",
 						"portletPreferences": {
 							"portletSetupPortletDecoratorId": "barebone"

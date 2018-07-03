@@ -5,8 +5,12 @@
 	<compatibility>
 		<version>7.0.0+</version>
 	</compatibility>
+
 	<theme id="hart" name="Hart">
-		<template-extension>ftl</template-extension>
+		<template-extension>
+			ftl
+		</template-extension>
+
 		<layout-templates>
 			<custom>
 				<layout-template id="hart-layout" name="Hart Layout">
@@ -15,15 +19,27 @@
 				</layout-template>
 			</custom>
 		</layout-templates>
+
 		<portlet-decorator id="barebone" name="Barebone">
-			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
+			<portlet-decorator-css-class>
+				portlet-barebone
+			</portlet-decorator-css-class>
 		</portlet-decorator>
+
 		<portlet-decorator id="borderless" name="Borderless">
-			<portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
+			<portlet-decorator-css-class>
+				portlet-borderless
+			</portlet-decorator-css-class>
 		</portlet-decorator>
+
 		<portlet-decorator id="decorate" name="Decorate">
-			<default-portlet-decorator>true</default-portlet-decorator>
-			<portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
+			<default-portlet-decorator>
+				true
+			</default-portlet-decorator>
+
+			<portlet-decorator-css-class>
+				portlet-decorate
+			</portlet-decorator-css-class>
 		</portlet-decorator>
 	</theme>
 </look-and-feel>

@@ -2,6 +2,8 @@
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element name="content" type="text_area" index-type="text" instance-id="jnhz">
-		<dynamic-content language-id="en_US"><![CDATA[]]></dynamic-content>
+		<dynamic-content language-id="en_US">
+			<![CDATA[]]>
+		</dynamic-content>
 	</dynamic-element>
 </root>
