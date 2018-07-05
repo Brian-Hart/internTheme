@@ -62,12 +62,12 @@
 
 					<a class="carousel-control-prev" data-slide="prev" href="#carouselExampleIndicators" onclick="paginate(-1)" role="button">
 						<span aria-hidden="true" class="carousel-control-prev-icon"><</span>
-						<span class="sr-only">Previous</span>
+						<span class="sr-only"><@liferay.language key="previous" /></span>
 					</a>
 
 					<a class="carousel-control-next" data-slide="next" href="#carouselExampleIndicators" onclick="paginate(1)" role="button">
 						<span aria-hidden="true" class="carousel-control-next-icon">></span>
-						<span class="sr-only">Next</span>
+						<span class="sr-only"><@liferay.language key="previous" /></span>
 					</a>
 				</div>
 			</#if>
